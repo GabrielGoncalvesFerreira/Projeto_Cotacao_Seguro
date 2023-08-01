@@ -1,0 +1,33 @@
+.panel {
+  background-color: white;
+  border-radius: 10px;
+  color: black; /* Alterado para preto para ser visível contra o fundo branco */
+  position: relative;
+}
+
+.top-strip {
+  width: 10px; /* Ajuste este valor para alterar a largura da tira */
+  height: 100%;
+  position: absolute;
+  left: 0;
+}
+
+.totalClientes {
+  border-left: 5px solid #007BFF;
+}
+
+.agendamentosPendentes {
+  border-left: 5px solid #6F42C1;
+}
+
+.totalUsuarios {
+  border-left: 5px solid #28A745;
+}
+
+.number, .description, .icon {
+  color: gray; /* Alterado para cinza */
+}
+
+.graph-container {
+  height: 100%; /* Ajuste este valor para alterar a altura dos gráficos */
+}

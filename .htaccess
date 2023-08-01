@@ -1,0 +1,17 @@
+# Ativa o módulo de reescrita do Apache
+RewriteEngine On
+
+# Para todas as solicitações que terminam com ".php"...
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /.*\.php\ HTTP/
+# ...que não são requisições AJAX...
+RewriteCond %{HTTP:X-Requested-With} !^XMLHttpRequest$ [NC]
+# ...remova a extensão ".php" na URL
+RewriteRule ^(.*)\.php$ /$1 [R=301,L]
+
+# Para todas as solicitações para URLs sem ".php"...
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+# ...que não são requisições AJAX...
+RewriteCond %{HTTP:X-Requested-With} !^XMLHttpRequest$ [NC]
+# ...acrescente a extensão ".php" na URL para localizar o arquivo PHP correspondente
+RewriteRule ^(.*)$ $1.php

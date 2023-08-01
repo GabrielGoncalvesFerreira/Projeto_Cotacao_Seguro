@@ -1,0 +1,234 @@
+body, html {
+    overflow-x: hidden;
+    background-color: #F7F7F7;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+
+
+.sidebar {
+    position: sticky; 
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #007bff;
+    /*padding-top: 60px;
+    z-index: 1000;*/
+    -webkit-box-shadow: 4px 0px 5px 0px rgba(173,173,173,1);
+    -moz-box-shadow: 4px 0px 5px 0px rgba(173,173,173,1);
+    box-shadow: 4px 0px 5px 0px rgba(173,173,173,1);
+}
+
+.sidebar .nav-link {
+    display: flex;
+    align-items: center;
+    padding: 20px 20px;
+    color: #fff;
+    text-decoration: center;
+    transition: background-color 0.3s;
+}
+
+.nav{
+    background-color: #fff;
+}
+
+.sidebar .nav-link:hover {
+    background-color: #0056b3;
+    color: #141414ee;
+}
+
+.sidebar .nav-link i {
+    margin-right: 10px;
+}
+
+.sidebar .nav-link span {
+    margin-left: 10px;
+}
+
+
+@media screen and (min-width: 163px) and (max-width: 994px)
+{
+    .sidebar {
+        width: 100%;
+        padding-top: 20px;
+    }
+
+    .sidebar .nav-link {
+        justify-content: center;
+    }
+
+    .sidebar .nav-link i {
+        margin-right: 0;
+    }
+    body, html{
+        height: 100%;
+    }
+
+    .nav-link{
+        display: block;
+    }
+}
+
+/* Estilize o texto dos menus em telas menores que 1083px */
+@media (max-width: 1083px) {
+    .menu .nav-link {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 475px) {
+    .logo {
+        height: 30px; /* ou qualquer tamanho que você deseja quando a tela for menor que 475px */
+    }
+}
+
+.navbar{
+    background-color: #fff;
+}
+
+#agendamentos {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding-top: 5px;
+    height: 75px;
+    width: calc(100% + 20px); /* Alterado de 100% para calc(100% + 20px) para compensar a margem negativa */
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    background-color: white;
+    flex-wrap: nowrap;
+    align-content: space-around;
+    padding-right: 20px; /* Adicionado padding-right para evitar que o último agendamento seja cortado */
+    margin-left: -20px; /* Adicionado margin-left negativo para compensar a sombra do menu lateral */
+}
+
+
+
+#agendamentos::-webkit-scrollbar {
+    width: 8px; /* largura da barra de rolagem vertical */
+    height: 8px; /* altura da barra de rolagem horizontal */
+}
+
+#agendamentos::-webkit-scrollbar-track {
+    background: #f1f1f1; /* cor de fundo da barra */
+}
+
+#agendamentos::-webkit-scrollbar-thumb {
+    background: #888; /* cor da barra de rolagem */
+}
+
+#agendamentos::-webkit-scrollbar-thumb:hover {
+    background: #555; /* cor da barra de rolagem ao passar o mouse */
+}
+
+.agendamento {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+    min-width: 180px;
+    border: 1px solid #7b7b7b4c; /* Cinza profundo */
+    border-radius: 16px;
+    padding: 0 10px;
+    margin: 0 5px;
+    box-sizing: border-box;
+    background-color: white;
+    transition: background-color 0.3s ease;  
+}
+
+.agendamento:hover {
+    background-color: #f0f0f0; /* Cor ao passar o mouse */
+}
+
+.hora {
+    font-size: 14px;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.dia {
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+.icone {
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.atrasado{
+    color: #FF6384;
+    border-left: 3px solid #FF6384;
+}
+
+.pendente{
+    color: #FF9F40;
+    border-left: 3px solid #FF9F40;
+}
+
+.proximo{
+    color: #6F42C1;
+    border-left: 3px solid #6F42C1;
+}
+
+.prorrogado{
+    color: #007BFF;
+    border-left: 3px solid #007BFF;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+}
+
+.user-info .bi-person-circle {
+    font-size: 25px; /* Ajuste o tamanho do ícone aqui */
+    vertical-align: middle;
+}
+
+.user-info #usuarioLogado {
+    vertical-align: middle;
+}
+
+.spinner-container {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.spinner {
+    border: 16px solid #f3f3f3;
+    border-top: 16px solid #3498db;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -60px 0 0 -60px;
+}
+
+.loading-text { /* Nova classe */
+    position: absolute;
+    top: 60%; /* posição abaixo do spinner */
+    left: 50%; /* centro horizontal */
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 18px;
+    text-align: center;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+

@@ -1,0 +1,116 @@
+
+.info-box {
+    /*height: 100px; /* Altura da div retangular */
+    background-color: #FFF; /* Cor de fundo da div retangular */
+    position: relative;
+    border-bottom: 1px solid #ccc;
+    box-shadow: 0px 1px 0px #ccc;
+    padding-bottom: 5px;
+}
+
+.grupoAgendamento{
+    border-top: 1px solid #ccc;
+    box-shadow: 0px 1px 0px #ccc;
+    padding-top: 5px;
+}
+
+.info-box:hover {
+    background-color: #F5F5F5;
+    cursor: pointer;
+}
+
+.container {
+    position: relative;
+  }
+  
+.calendario {
+    top: 50%;
+    left: 50%;
+}
+
+.highlight-event {
+    background-color: #565ED0 !important;
+    color: #fff;
+}
+
+.stripPendente {
+    width: 10px; /* Largura da tira colorida */
+    height: 100%; /* Altura igual à altura da div retangular */
+    background-color: #565ED0; /* Cor da tira colorida */
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.stripCancelado {
+    width: 10px; /* Largura da tira colorida */
+    height: 100%; /* Altura igual à altura da div retangular */
+    background-color: #ff0000; /* Cor da tira colorida */
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.stripSucesso {
+    width: 10px; /* Largura da tira colorida */
+    height: 100%; /* Altura igual à altura da div retangular */
+    background-color: #56A848; /* Cor da tira colorida */
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.stripProrrogado {
+    width: 10px; /* Largura da tira colorida */
+    height: 100%; /* Altura igual à altura da div retangular */
+    background-color: #F3C23A; /* Cor da tira colorida */
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+
+.content {
+    padding: 10px; /* Espaçamento interno do conteúdo */
+}
+
+.highlight-event {
+    background-color: #FFC107 !important;
+    color: #fff;
+}
+
+.datepicker table tr td, .datepicker table tr th {
+    min-width: 40px !important;  /* Aumente conforme necessário */
+    height: 40px;
+    line-height: 40px; 
+    text-align: center;
+    border: none;
+}
+
+.datepicker table {
+    width: 100%; 
+}
+
+.datepicker table tr td.old, .datepicker table tr td.new {
+    color: #999;
+}
+
+.datepicker .active {
+    background-color: #007bff;
+    color: white;
+}
+
+.datepicker {
+    width: 100% !important; /* Ajuste o valor conforme necessário */
+    font-size: 14px; 
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+}
+
+#calendar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Ou defina a altura que você precisa */
+}
+

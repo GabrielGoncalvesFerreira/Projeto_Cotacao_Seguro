@@ -1,0 +1,43 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: relative;
+    background: linear-gradient(180deg, #4345BE, #606BDA);
+}
+
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.login-container {
+    background-color: white;
+    max-width: 800px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-container .row input {
+    border-radius: 18px;
+}
+
+.login-container .row submit {
+    border-radius: 18px;
+}
+
+/*
+* Se a largura for menor que 767px irá aplicar os valores abaixo.
+*/
+@media (max-width: 767px) {
+    .login-container {
+        max-width: 400px;
+    }
+}
